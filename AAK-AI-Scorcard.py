@@ -212,7 +212,7 @@ Applicant: {name}
 #- DebttoIncome Ratio: {debt_to_income*100:1f}
 - Credit Score: {credit_score}
 - Employment Tenure: {employment_years} years
-- Collateral Ratio: {collateral_ratio:.2f}x
+- Collateral Ratio: {collateral_ratio:.2f} x
 - Loan Amount: {fmt_inr(loan_amount)}
 Risk Metrics: Score={total_score}/100, Grade={rg['grade']} ({rg['label']}), PD={pd_val*100:.2f}%, LGD={lgd_val*100:.0f}%, EL={fmt_inr(el_val)}, Decision={rec['text']}
 Write 3-4 sentences like a real credit analyst memo. Use professional banking language."""
