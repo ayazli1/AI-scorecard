@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
-import anthropic
+#import anthropic
 import math
 
 st.set_page_config(page_title="Credit Risk Intelligence", page_icon="📊", layout="wide", initial_sidebar_state="expanded")
@@ -117,7 +117,7 @@ with tab_scorer:
     sidebar = st.sidebar
     sidebar.markdown('<div style="padding:8px 0 16px 0;border-bottom:1px solid #0f1923;margin-bottom:20px;"><div style="font-family:\'DM Mono\',monospace;font-size:10px;color:#4a5f7a;letter-spacing:2px;text-transform:uppercase;">Applicant Inputs</div></div>', unsafe_allow_html=True)
 
-    api_key = sidebar.text_input("🔑 Anthropic API Key", type="password", placeholder="sk-ant-api03-...")
+    #api_key = sidebar.text_input("🔑 Anthropic API Key", type="password", placeholder="sk-ant-api03-...")
     sidebar.markdown("<div style='height:8px'></div>", unsafe_allow_html=True)
     name = sidebar.text_input("Applicant Name", value="New Applicant")
     sidebar.markdown("---")
@@ -197,16 +197,16 @@ with tab_scorer:
         st.plotly_chart(fig_bars, use_container_width=True, config={"displayModeBar":False})
         st.markdown('</div>', unsafe_allow_html=True)
 
-    with col_commentary:
-        st.markdown('<div class="risk-card" style="min-height:300px;"><div class="metric-label" style="margin-bottom:14px;">AI Credit Analyst Commentary</div>', unsafe_allow_html=True)
-        if gen_commentary:
-            if not api_key:
+    #with col_commentary:
+       # st.markdown('<div class="risk-card" style="min-height:300px;"><div class="metric-label" style="margin-bottom:14px;">AI Credit Analyst Commentary</div>', unsafe_allow_html=True)
+       # if gen_commentary:
+          #  if not api_key:
                 st.warning("Please enter your Anthropic API Key in the sidebar.")
-            else:
-                with st.spinner("Analysing credit profile…"):
-                    try:
-                        client = anthropic.Anthropic(api_key=api_key)
-                        prompt = f"""You are a senior credit analyst at a bank. Analyze this loan application and give a concise 3-4 sentence credit decision commentary.
+           # else:
+                #with st.spinner("Analysing credit profile…"):
+                   # try:
+                       # client = anthropic.Anthropic(api_key=api_key)
+                        #prompt = f"""You are a senior credit analyst at a bank. Analyze this loan application and give a concise 3-4 sentence credit decision commentary.
 Applicant: {name}
 - Annual Income: {fmt_inr(annual_income)}
 - Debt-to-Income Ratio: {debt_to_income*100:.1f}%
