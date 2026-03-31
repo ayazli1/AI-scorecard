@@ -209,7 +209,7 @@ with tab_scorer:
                         #prompt = f"""You are a senior credit analyst at a bank. Analyze this loan application and give a concise 3-4 sentence credit decision commentary.
 Applicant: {name}
 - Annual Income: {fmt_inr(annual_income)}
-- DebttoIncome Ratio: {debt_to_income*100:1f}%
+- DebttoIncome Ratio: {debt_to_income*100:1f}
 - Credit Score: {credit_score}
 - Employment Tenure: {employment_years} years
 - Collateral Ratio: {collateral_ratio:.2f}x
