@@ -201,7 +201,7 @@ with tab_scorer:
        # st.markdown('<div class="risk-card" style="min-height:300px;"><div class="metric-label" style="margin-bottom:14px;">AI Credit Analyst Commentary</div>', unsafe_allow_html=True)
        # if gen_commentary:
           #  if not api_key:
-                st.warning("Please enter your Anthropic API Key in the sidebar.")
+                #st.warning("Please enter your Anthropic API Key in the sidebar.")
            # else:
                 #with st.spinner("Analysing credit profile…"):
                    # try:
